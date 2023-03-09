@@ -1,0 +1,45 @@
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1em;
+  justify-content: center;
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances .pf2e-stances__stance {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  box-shadow: 0 0 4px black;
+  padding-right: 0.5em;
+  cursor: pointer;
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances .pf2e-stances__stance .pf2e-stances__img {
+  flex: 0 0 32px;
+  height: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances .pf2e-stances__stance .pf2e-stances__name {
+  flex: 1;
+  white-space: nowrap;
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances .pf2e-stances__stance.active {
+  box-shadow: inset 0 0 4px black;
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances .pf2e-stances__stance.active .pf2e-stances__img {
+  border: 1px solid transparent;
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances .pf2e-stances__stance.active .pf2e-stances__name {
+  color: var(--primary);
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances:not(.can-use-stances) .pf2e-stances__stance {
+  box-shadow: 0 0 1px black;
+  cursor: not-allowed;
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances:not(.can-use-stances) .pf2e-stances__stance > * {
+  filter: grayscale(1) blur(1px);
+}
+.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .pf2e-stances:not(.can-use-stances) .pf2e-stances__stance .pf2e-stances__img {
+  border: 0;
+}

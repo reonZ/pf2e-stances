@@ -9,7 +9,9 @@
             "discord": "Idle#3251"
         }
     ],
-    "esmodules": ["scripts/main.js"],
+    "esmodules": [
+        "scripts/main.js"
+    ],
     "compatibility": {
         "minimum": "10.291",
         "verified": "10"
@@ -22,7 +24,9 @@
     "download": "https://github.com/reonZ/pf2e-stances/releases/download/1.0.0/module.zip",
     "changelog": "https://github.com/reonZ/pf2e-stances/blob/master/CHANGELOG.md",
     "bugs": "https://github.com/reonZ/pf2e-stances/issues",
-    "styles": ["styles/sheet.css"],
+    "styles": [
+        "styles/sheet.css"
+    ],
     "languages": [
         {
             "lang": "en",

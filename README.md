@@ -14,7 +14,7 @@ The stances will not be normally available if the character is not part of an en
 
 When leaving an encounter, the stance effects will be removed from the character automatically.
 
-NOTE: If a feat override a stance in the system, the upgraded version of the stance effect will be used instead (i.e. if the character has both `Gorilla Stance` and `Gorilla Pound` feats, the effect of the later will be used but the name of the stance in the tab will still be `Gorilla Pound`).
+If a feat override a stance in the system, the upgraded version of the stance effect will be used instead (i.e. if the character has both `Gorilla Stance` and `Gorilla Pound` feats, the effect of the later will be used but the name of the stance in the tab will still be `Gorilla Pound`).
 
 New effects have been added for all the stances that didn't have one in the system for convenience.
 

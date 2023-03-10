@@ -58,14 +58,14 @@ async function addStances(actor: CharacterPF2e, html: JQuery) {
     if (!stances.length) return
 
     const inCombat = actor.getActiveTokens(true, true).some(token => token.inCombat)
-    const options = html.find(
-        '.sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] .actions-options'
-    )
+    const tab = html.find('.sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter]')
+    const options = tab.find('.actions-options')
     const template = await renderTemplate(templatePath('stances.hbs'), {
         stances,
         canUseStances: inCombat && !actor.isDead,
         i18n: localize,
     })
 
-    options.after(template)
+    if (options.length) options.after(template)
+    else tab.prepend(template)
 }

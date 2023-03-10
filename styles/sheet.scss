@@ -5,6 +5,10 @@
         gap: 0.5em 1em;
         justify-content: center;
 
+        &:first-child {
+            margin-top: 0.5em;
+        }
+
         .pf2e-stances__stance {
             display: flex;
             align-items: center;

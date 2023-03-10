@@ -5,6 +5,11 @@ type ReturnedStance = { name: string; img: string; effectUUID: ItemUUID; effectI
 
 const STANCES: StanceData[] = [
     {
+        // Arcane Cascade
+        feat: 'Compendium.pf2e.classfeatures.09iL38CZZEa0q0Mt',
+        effect: 'Compendium.pf2e.feat-effects.fsjO5oTKttsbpaKl',
+    },
+    {
         // Buckler Dance
         feat: 'Compendium.pf2e.feats-srd.tDWc2LQNl0Op1Auq',
         effect: 'Compendium.pf2e-stances.effects.PS17dsXkTdQmOv7w',

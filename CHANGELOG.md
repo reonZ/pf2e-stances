@@ -1,3 +1,7 @@
+# 1.2.1
+
+-   fix an ownership bug
+
 # 1.2.0
 
 -   now supports `Stance Savant` by automatically entering a stance or offering a selection window when the character joins a new encounter

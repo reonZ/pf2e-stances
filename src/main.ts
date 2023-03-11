@@ -6,7 +6,7 @@ import { getEffects } from './stances'
 export const MODULE_ID = 'pf2e-stances'
 setModuleID(MODULE_ID)
 
-Hooks.on('preDeleteCombatant', deleteCombatant)
+Hooks.on('deleteCombatant', deleteCombatant)
 Hooks.on('createCombatant', createCombatant)
 Hooks.on('deleteCombat', deleteCombat)
 

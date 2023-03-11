@@ -6,7 +6,7 @@ import { getEffects } from './stances'
 export const MODULE_ID = 'pf2e-stances'
 setModuleID(MODULE_ID)
 
-Hooks.on('deleteCombatant', deleteCombatant)
+Hooks.on('preDeleteCombatant', deleteCombatant)
 Hooks.on('createCombatant', createCombatant)
 Hooks.on('deleteCombat', deleteCombat)
 
@@ -22,16 +22,20 @@ function deleteCombatant(combatant: Combatant) {
     const actor = getActorFromCombatant(combatant)
     if (!actor) return
 
-    const effects = getEffects(actor).map(effect => effect.id)
+    if (game.user.isGM) {
+        const effects = getEffects(actor).map(effect => effect.id)
+        if (effects.length) actor.deleteEmbeddedDocuments('Item', effects)
+    }
 
-    if (effects.length) actor.deleteEmbeddedDocuments('Item', effects)
-    else refreshCharacterSheets(actor)
+    refreshCharacterSheets(actor)
 }
 
 function createCombatant(combatant: Combatant) {
     const actor = getActorFromCombatant(combatant)
     if (!actor) return
-    checkForSavant(actor)
+
+    if (!game.user.isGM && actor.isOwner) checkForSavant(actor)
+
     refreshCharacterSheets(actor)
 }
 

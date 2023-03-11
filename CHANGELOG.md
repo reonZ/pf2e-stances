@@ -1,3 +1,7 @@
+# 1.2.0
+
+-   now supports `Scroll Savant` by automatically entering a stance or offering a selection window when the character joins a new encounter
+
 # 1.1.0
 
 -   added `Bullet Dancer Stance` support and effect

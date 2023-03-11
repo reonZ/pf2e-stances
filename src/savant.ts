@@ -32,7 +32,7 @@ function openStancesMenu(actor: CharacterPF2e, stances: ReturnedStance[]) {
         content += ` style="margin-right: .5em;"> <span>${stance.name}</span></label>`
     }
 
-    content += '<div style="margin-bottom: 1em;"></div>'
+    content += '<div style="margin-bottom: .5em;"></div>'
 
     new Dialog({
         title: localize('title'),

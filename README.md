@@ -18,6 +18,12 @@ If a feat override a stance in the system, the upgraded version of the stance ef
 
 New effects have been added for all the stances that didn't have one in the system for convenience.
 
+# Stance Savant
+
+![](./readme/menu.webp)
+
+The module will handle `Stance Savant` by automatically entering a stance if only one exist on the character or open a window asking to select one when the character joins a new encounter.
+
 # CHANGELOG
 
 You can see the changelog [HERE](./CHANGELOG.md)

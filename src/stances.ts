@@ -15,6 +15,11 @@ const STANCES: StanceData[] = [
         effect: 'Compendium.pf2e-stances.effects.PS17dsXkTdQmOv7w',
     },
     {
+        // Bullet Dancer Stance
+        feat: 'Compendium.pf2e.feats-srd.j1hhTLOq7o80XCyV',
+        effect: 'Compendium.pf2e-stances.effects.TZDeooWoSNiU7fa3',
+    },
+    {
         // Cobra Stance
         feat: 'Compendium.pf2e.feats-srd.AkV4Jyllo6nlK2Sl',
         effect: 'Compendium.pf2e.feat-effects.CgxYa0lrLUjS2ZhI',

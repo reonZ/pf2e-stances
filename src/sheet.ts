@@ -1,6 +1,6 @@
 import { localize } from '@utils/foundry/localize'
 import { templatePath } from '@utils/foundry/path'
-import { getEffects, getStances } from './stances'
+import { addStance, getEffects, getStances } from './stances'
 
 export async function renderCharacterSheetPF2e(sheet: CharacterSheetPF2e, html: JQuery) {
     const actor = sheet.actor
@@ -44,13 +44,7 @@ async function onToggleStance(event: JQuery.ClickEvent<any, any, HTMLElement>, a
         )
     }
 
-    if (create) {
-        const effect = await fromUuid<EffectPF2e>(effectUUID)
-        if (effect) {
-            const items = (await actor.createEmbeddedDocuments('Item', [effect.toObject()])) as EffectPF2e[]
-            items[0]?.toMessage()
-        }
-    }
+    if (create) addStance(actor, effectUUID)
 }
 
 async function addStances(actor: CharacterPF2e, html: JQuery) {

@@ -1,4 +1,5 @@
 import { setModuleID } from '@utils/module'
+import { checkForSavant } from './savant'
 import { refreshCharacterSheets, renderCharacterSheetPF2e } from './sheet'
 import { getEffects } from './stances'
 
@@ -29,7 +30,9 @@ function deleteCombatant(combatant: Combatant) {
 
 function createCombatant(combatant: Combatant) {
     const actor = getActorFromCombatant(combatant)
-    if (actor) refreshCharacterSheets(actor)
+    if (!actor) return
+    checkForSavant(actor)
+    refreshCharacterSheets(actor)
 }
 
 function getActorFromCombatant(combatant: Combatant) {

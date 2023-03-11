@@ -1,8 +1,5 @@
 import { getSourceId } from '@utils/foundry/flags'
 
-type StanceData = { feat: ItemUUID; effect: ItemUUID; replace?: ItemUUID }
-type ReturnedStance = { name: string; img: string; effectUUID: ItemUUID; effectID: string }
-
 const STANCES: StanceData[] = [
     {
         // Arcane Cascade
@@ -312,4 +309,14 @@ export function getEffects(actor: CharacterPF2e) {
     }
 
     return effects
+}
+
+export async function addStance(actor: CharacterPF2e, uuid: ItemUUID) {
+    const effect = await fromUuid<EffectPF2e>(uuid)
+    if (effect) {
+        const items = (await actor.createEmbeddedDocuments('Item', [effect.toObject()])) as EffectPF2e[]
+        items[0]?.toMessage()
+        return true
+    }
+    return false
 }

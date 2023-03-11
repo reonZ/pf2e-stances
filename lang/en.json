@@ -1,5 +1,12 @@
 {
     "pf2e-stances": {
-        "noCombat": "You can enter or be in a stance only in encounter mode"
+        "noCombat": "You can enter or be in a stance only in encounter mode",
+        "useStance": "Automatically entering the stance '{stance}'",
+        "menu": {
+            "title": "Stance Savant",
+            "select": "Please select a stance",
+            "accept": "Accept",
+            "cancel": "Cancel"
+        }
     }
 }

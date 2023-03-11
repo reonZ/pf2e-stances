@@ -1,3 +1,7 @@
+# 1.2.2
+
+-   fix wrong hook bug
+
 # 1.2.1
 
 -   fix an ownership bug

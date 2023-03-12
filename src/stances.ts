@@ -345,10 +345,16 @@ export function getEffects(actor: CharacterPF2e) {
 
 export async function addStance(actor: CharacterPF2e, uuid: ItemUUID) {
     const effect = await fromUuid<EffectPF2e>(uuid)
+
     if (effect) {
-        const items = (await actor.createEmbeddedDocuments('Item', [effect.toObject()])) as EffectPF2e[]
+        const obj = effect.toObject()
+        if (!getProperty(obj, 'flags.core.sourceId')) setProperty(obj, 'flags.core.sourceId', effect.uuid)
+
+        const items = (await actor.createEmbeddedDocuments('Item', [obj])) as EffectPF2e[]
         items[0]?.toMessage()
+
         return true
     }
+
     return false
 }

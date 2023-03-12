@@ -1,3 +1,8 @@
+# 1.4.0
+
+-   module is updated for system version `4.9.0`
+-   all the missing effects were added to the system and will now be used
+
 # 1.3.1
 
 -   fixed an issue with custom effects not having a `sourceId` flag

@@ -279,6 +279,7 @@ export function parseCustomStances() {
             if (typeof stance !== 'object' || Array.isArray(stance)) continue
             if (typeof stance.feat !== 'string' || stance.feat.length < 21) continue
             if (typeof stance.effect !== 'string' || stance.feat.length < 21) continue
+            if (FEATS.has(stance.feat) || EFFECTS.has(stance.effect)) continue
 
             FEATS.set(stance.feat, stance)
             EFFECTS.set(stance.effect, stance)

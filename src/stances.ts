@@ -1,4 +1,6 @@
 import { getSourceId } from '@utils/foundry/flags'
+import { getSetting } from '@utils/foundry/settings'
+import { error } from '../../../../../foundryVTT-projects/@utils/foundry/notification'
 
 const STANCES: StanceData[] = [
     {
@@ -255,8 +257,34 @@ const STANCES: StanceData[] = [
     },
 ]
 
-const FEATS: Map<ItemUUID, StanceData> = new Map(STANCES.map(stance => [stance.feat, stance]))
-const EFFECTS: Map<ItemUUID, StanceData> = new Map(STANCES.map(stance => [stance.effect, stance]))
+const FEATS: Map<ItemUUID, StanceData> = new Map()
+const EFFECTS: Map<ItemUUID, StanceData> = new Map()
+
+export function parseCustomStances() {
+    FEATS.clear()
+    EFFECTS.clear()
+
+    for (const stance of STANCES) {
+        FEATS.set(stance.feat, stance)
+        EFFECTS.set(stance.effect, stance)
+    }
+
+    try {
+        const customs = JSON.parse(getSetting<string>('custom').trim())
+
+        for (const stance of customs) {
+            if (typeof stance !== 'object' || Array.isArray(stance)) continue
+            if (typeof stance.feat !== 'string' || stance.feat.length < 21) continue
+            if (typeof stance.effect !== 'string' || stance.feat.length < 21) continue
+
+            FEATS.set(stance.feat, stance)
+            EFFECTS.set(stance.effect, stance)
+        }
+    } catch (err) {
+        error('settings.custom.error')
+        console.error(err)
+    }
+}
 
 export function getStances(actor: CharacterPF2e) {
     const stances: StanceData[] = []

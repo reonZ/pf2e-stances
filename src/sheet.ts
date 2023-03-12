@@ -14,7 +14,7 @@ export async function renderCharacterSheetPF2e(sheet: CharacterSheetPF2e, html: 
 export function refreshCharacterSheets(actor: CharacterPF2e) {
     for (const win of Object.values(ui.windows)) {
         if (!(win instanceof ActorSheet)) continue
-        if (actor === (win as ActorSheetPF2e).actor) win.render()
+        if (actor === win.actor) win.render()
     }
 }
 

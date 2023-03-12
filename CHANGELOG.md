@@ -1,3 +1,7 @@
+# 1.3.1
+
+-   fixed an issue with custom effects not having a `sourceId` flag
+
 # 1.3.0
 
 -   added support for custom stances

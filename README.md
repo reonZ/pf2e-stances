@@ -28,7 +28,7 @@ The module will handle `Stance Savant` by automatically entering a stance if onl
 
 You can register your own combos of `feat` + `effect` in the settings. To do so, you need to provide a valid JSON array of objects with a `feat` and `effect` keys containing their respective UUIDs.
 
-    { "feat": "Compendium.pf2e.feats-srd.AN9jY1JVcU20Qdw6", "effect": "Compendium.pf2e.feat-effects.b2kWJuCPj1rDMdwz" }
+    [{ "feat": "Compendium.pf2e.feats-srd.AN9jY1JVcU20Qdw6", "effect": "Compendium.pf2e.feat-effects.b2kWJuCPj1rDMdwz" }]
 
 # CHANGELOG
 

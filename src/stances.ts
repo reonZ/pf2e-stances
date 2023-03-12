@@ -270,7 +270,10 @@ export function parseCustomStances() {
     }
 
     try {
-        const customs = JSON.parse(getSetting<string>('custom').trim())
+        const setting = getSetting<string>('custom').trim()
+        if (!setting) return
+
+        const customs = JSON.parse(setting)
 
         for (const stance of customs) {
             if (typeof stance !== 'object' || Array.isArray(stance)) continue

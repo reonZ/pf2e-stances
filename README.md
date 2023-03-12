@@ -24,6 +24,12 @@ New effects have been added for all the stances that didn't have one in the syst
 
 The module will handle `Stance Savant` by automatically entering a stance if only one exist on the character or open a window asking to select one when the character joins a new encounter.
 
+# Custom Stances
+
+You can register your own combos of `feat` + `effect` in the settings. To do so, you need to provide a valid JSON array of objects with a `feat` and `effect` keys containing their respective UUIDs.
+
+    { "feat": "Compendium.pf2e.feats-srd.AN9jY1JVcU20Qdw6", "effect": "Compendium.pf2e.feat-effects.b2kWJuCPj1rDMdwz" }
+
 # CHANGELOG
 
 You can see the changelog [HERE](./CHANGELOG.md)

@@ -1,3 +1,7 @@
+# 1.3.0
+
+-   added support for custom stances
+
 # 1.2.2
 
 -   fix wrong hook bug

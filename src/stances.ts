@@ -11,12 +11,12 @@ const STANCES: StanceData[] = [
     {
         // Buckler Dance
         feat: 'Compendium.pf2e.feats-srd.tDWc2LQNl0Op1Auq',
-        effect: 'Compendium.pf2e-stances.effects.PS17dsXkTdQmOv7w',
+        effect: 'Compendium.pf2e.feat-effects.PS17dsXkTdQmOv7w',
     },
     {
         // Bullet Dancer Stance
         feat: 'Compendium.pf2e.feats-srd.j1hhTLOq7o80XCyV',
-        effect: 'Compendium.pf2e-stances.effects.TZDeooWoSNiU7fa3',
+        effect: 'Compendium.pf2e.feat-effects.6ctQFQfSZ6o1uyyZ',
     },
     {
         // Cobra Stance
@@ -42,7 +42,7 @@ const STANCES: StanceData[] = [
     {
         // Disruptive Stance
         feat: 'Compendium.pf2e.feats-srd.OEGhbRgW6wRbccns',
-        effect: 'Compendium.pf2e-stances.effects.qBR3kqGCeKp3T2Be',
+        effect: 'Compendium.pf2e.feat-effects.qBR3kqGCeKp3T2Be',
     },
     {
         // Dragon Stance
@@ -72,7 +72,7 @@ const STANCES: StanceData[] = [
     {
         // Fane's Fourberie
         feat: 'Compendium.pf2e.feats-srd.80CEAB05TP5ki9iW',
-        effect: 'Compendium.pf2e-stances.effects.GvqB4M8LrHpzYEvl',
+        effect: 'Compendium.pf2e.feat-effects.GvqB4M8LrHpzYEvl',
     },
     {
         // Gorilla Stance
@@ -88,12 +88,12 @@ const STANCES: StanceData[] = [
     {
         // Graceful Poise
         feat: 'Compendium.pf2e.feats-srd.rFaUJtB46scuAidY',
-        effect: 'Compendium.pf2e-stances.effects.mark4VEQoynfYNBF',
+        effect: 'Compendium.pf2e.feat-effects.mark4VEQoynfYNBF',
     },
     {
         // Impassable Wall Stance
         feat: 'Compendium.pf2e.feats-srd.YeyOqNFKaeuOTiJr',
-        effect: 'Compendium.pf2e-stances.effects.zzC2qZwEKf4Ja3xD',
+        effect: 'Compendium.pf2e.feat-effects.zzC2qZwEKf4Ja3xD',
     },
     {
         // Inspiring Marshal Stance
@@ -113,7 +113,7 @@ const STANCES: StanceData[] = [
     {
         // Lunging Stance
         feat: 'Compendium.pf2e.feats-srd.ZghzLmYgeE19GqjP',
-        effect: 'Compendium.pf2e-stances.effects.W8CKuADdbODpBh6O',
+        effect: 'Compendium.pf2e.feat-effects.W8CKuADdbODpBh6O',
     },
     {
         // Masquerade of Seasons Stance
@@ -123,7 +123,7 @@ const STANCES: StanceData[] = [
     {
         // Mobile Shot Stance
         feat: 'Compendium.pf2e.feats-srd.rByA8NDI6ZtNgBeT',
-        effect: 'Compendium.pf2e-stances.effects.NWOmJ6WJFheaGhho',
+        effect: 'Compendium.pf2e.feat-effects.NWOmJ6WJFheaGhho',
     },
     {
         // Monastic Archer Stance
@@ -158,7 +158,7 @@ const STANCES: StanceData[] = [
     {
         // Powder Punch Stance
         feat: 'Compendium.pf2e.feats-srd.Ziky4XVV7syXVbUg',
-        effect: 'Compendium.pf2e-stances.effects.kDTiRg9vVOYNnTyr',
+        effect: 'Compendium.pf2e.feat-effects.kDTiRg9vVOYNnTyr',
     },
     {
         // Push Back the Dead!
@@ -178,17 +178,17 @@ const STANCES: StanceData[] = [
     {
         // Ricochet Stance (Fighter)
         feat: 'Compendium.pf2e.feats-srd.tRHjUCl0xqG97nok',
-        effect: 'Compendium.pf2e-stances.effects.Unfl4QQURWaX2zfd',
+        effect: 'Compendium.pf2e.feat-effects.Unfl4QQURWaX2zfd',
     },
     {
         // Ricochet Stance (Rogue)
         feat: 'Compendium.pf2e.feats-srd.RsNvCSrCN7czHC0G',
-        effect: 'Compendium.pf2e-stances.effects.Unfl4QQURWaX2zfd',
+        effect: 'Compendium.pf2e.feat-effects.Unfl4QQURWaX2zfd',
     },
     {
         // Rough Terrain Stance
         feat: 'Compendium.pf2e.feats-srd.O0POcPD2aELYTcIK',
-        effect: 'Compendium.pf2e-stances.effects.YkiTA74FrUUu5IvI',
+        effect: 'Compendium.pf2e.feat-effects.YkiTA74FrUUu5IvI',
     },
     {
         // Shooting Stars Stance
@@ -228,12 +228,12 @@ const STANCES: StanceData[] = [
     {
         // Twinned Defense (Fighter)
         feat: 'Compendium.pf2e.feats-srd.xjLbabfyQzBNT4y1',
-        effect: 'Compendium.pf2e-stances.effects.3eHMqVx30JGiJqtM',
+        effect: 'Compendium.pf2e.feat-effects.3eHMqVx30JGiJqtM',
     },
     {
         // Twinned Defense (Swashbuckler)
         feat: 'Compendium.pf2e.feats-srd.kTRGAST9J9ZxJZ4A',
-        effect: 'Compendium.pf2e-stances.effects.3eHMqVx30JGiJqtM',
+        effect: 'Compendium.pf2e.feat-effects.3eHMqVx30JGiJqtM',
     },
     {
         // Vitality-Manipulating Stance
@@ -248,7 +248,7 @@ const STANCES: StanceData[] = [
     {
         //  Whirlwind Stance
         feat: 'Compendium.pf2e.feats-srd.wZZyasfIqwiJBQAQ',
-        effect: 'Compendium.pf2e-stances.effects.q6UokHWSEcEYWmvh',
+        effect: 'Compendium.pf2e.feat-effects.q6UokHWSEcEYWmvh',
     },
     {
         // Wolf Stance
@@ -258,7 +258,7 @@ const STANCES: StanceData[] = [
 ]
 
 const FEATS: Map<ItemUUID, StanceData> = new Map()
-const EFFECTS: Map<ItemUUID, StanceData> = new Map()
+const EFFECTS: Set<ItemUUID> = new Set()
 
 export function parseCustomStances() {
     FEATS.clear()
@@ -266,7 +266,7 @@ export function parseCustomStances() {
 
     for (const stance of STANCES) {
         FEATS.set(stance.feat, stance)
-        EFFECTS.set(stance.effect, stance)
+        EFFECTS.add(stance.effect)
     }
 
     try {
@@ -282,7 +282,7 @@ export function parseCustomStances() {
             if (FEATS.has(stance.feat) || EFFECTS.has(stance.effect)) continue
 
             FEATS.set(stance.feat, stance)
-            EFFECTS.set(stance.effect, stance)
+            EFFECTS.add(stance.effect)
         }
     } catch (err) {
         error('settings.custom.error')

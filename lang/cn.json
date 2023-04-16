@@ -1,0 +1,19 @@
+{
+    "pf2e-stances": {
+        "noCombat": "只有在遭遇模式，你才能进入为保持一个架势",
+        "useStance": "自动进入架势：A '{stance}'",
+        "menu": {
+            "title": "架势贯通",
+            "select": "请选择一个架势",
+            "accept": "确定",
+            "cancel": "取消"
+        },
+        "settings": {
+            "custom": {
+                "name": "私设架势",
+                "hint": "物品的 JSON 数组中应包含 \"feat\" 以及 \"effect\" 这两个 key。举例而言： [ { \"feat\": \"Compendium.pf2e.classfeatures.7JbiaZ8bxODM5mzS\", \"effect\": \"Compendium.pf2e.bestiary-effects.zBbmuudbWY8FaOwZ\" }, { \"feat\": \"Compendium.pf2e.classfeatures.XPPG7nN9pxt0sjMg\", \"effect\": \"Compendium.pf2e.bestiary-effects.1bOSJ2LbEC28aI9f\" } ]",
+                "error": "在对私设架势进行解析时，出现了错误。"
+            }
+        }
+    }
+}

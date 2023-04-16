@@ -1,3 +1,7 @@
+# 1.4.1
+
+-   simple chinese localization issue
+
 # 1.4.0
 
 -   module is updated for system version `4.9.0`

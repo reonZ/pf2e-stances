@@ -31,13 +31,13 @@
         {
             "lang": "en",
             "name": "English",
-            "path": "lang/en.json"
+            "path": "lang/en.json",
             "flags": {}
         },
         {
             "lang": "cn",
             "name": "中文（简体）",
-            "path": "lang/cn.json"
+            "path": "lang/cn.json",
             "flags": {}
         }
     ],

@@ -3,7 +3,10 @@ import { info } from '@utils/foundry/notification'
 import { subLocalize } from '@utils/foundry/localize'
 import { addStance, getEffects, getStances } from './stances'
 
-const STANCE_SAVANT: ItemUUID[] = ['Compendium.pf2e.feats-srd.yeSyGnYDkl2GUNmu', 'Compendium.pf2e.feats-srd.LI9VtCaL5ZRk0Wo8']
+const STANCE_SAVANT: ItemUUID[] = [
+    'Compendium.pf2e.feats-srd.Item.yeSyGnYDkl2GUNmu',
+    'Compendium.pf2e.feats-srd.Item.LI9VtCaL5ZRk0Wo8',
+]
 
 export async function checkForSavant(actor: CharacterPF2e) {
     if (!hasItemWithSourceId(actor, STANCE_SAVANT, ['feat'])) return

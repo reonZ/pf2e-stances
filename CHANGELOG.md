@@ -1,3 +1,7 @@
+# 1.5.0
+
+-   converted all stances UUIDs to be compatible with v11
+
 # 1.4.1
 
 -   simple chinese localization issue

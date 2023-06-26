@@ -333,6 +333,7 @@ export function getStances(actor: CharacterPF2e) {
                 img: effect.img,
                 effectID: effects.get(stance.effect) ?? '',
                 effectUUID: stance.effect,
+                actionUUID: stance.action ?? stance.feat,
             }
 
             return returned

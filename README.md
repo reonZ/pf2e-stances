@@ -43,10 +43,19 @@ game.modules.get('pf2e-stances').api
 
 ```js
 /**
- * @param {CharacterPF2e} actor
- * @returns {Array<{ name: string; img: string; effectUUID: ItemUUID; effectID: string }>} the stances on the actor
+ * @typedef {object} ReturnedStance
+ * @property {string} name
+ * @property {string} img
+ * @property {string} effectID
+ * @property {ItemUUID} effectUUID
+ * @property {ItemUUID} actionUUID
  */
-getStances: (actor: CharacterPF2e) => { name: string; img: string; effectUUID: ItemUUID; effectID: string }[]
+
+/**
+ * @param {CharacterPF2e} actor
+ * @returns {Array<ReturnedStance>} the stances on the actor
+ */
+getStances: (actor: CharacterPF2e) => ReturnedStance[]
 ```
 
 ```js

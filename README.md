@@ -1,5 +1,7 @@
 # FoundryVTT PF2e Stances
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K6M2V13)
+
 This module will help players manage their character's stances (only stances which originate from feats will be handled).
 
 ![](./readme/stances.webp)

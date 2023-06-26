@@ -54,7 +54,7 @@ const STANCES: StanceData[] = [
     {
         // Dread Marshal Stance
         feat: 'Compendium.pf2e.feats-srd.Item.R7c4PyTNkZb0yvoT',
-        effect: 'Compendium.pf2e.feat-effects.Item.KBEJVRrie2JTHWIK',
+        effect: 'Compendium.pf2e.feat-effects.Item.qX62wJzDYtNxDbFv',
     },
     {
         // Dueling Dance (Fighter)
@@ -100,7 +100,7 @@ const STANCES: StanceData[] = [
     {
         // Inspiring Marshal Stance
         feat: 'Compendium.pf2e.feats-srd.Item.bvOsJNeI0ewvQsFa',
-        effect: 'Compendium.pf2e.feat-effects.Item.kzEPq4aczYb6OD2h',
+        effect: 'Compendium.pf2e.feat-effects.Item.er5tvDNvpbcnlbHQ',
     },
     {
         // Ironblood Stance

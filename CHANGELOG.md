@@ -1,3 +1,7 @@
+# 1.6.1
+
+-   updated both `Dread Marshal` and `Inspiring Marshal` to use the stances effects instead of the effects themselves
+
 # 1.6.0
 
 -   exposed API function to the global

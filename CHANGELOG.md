@@ -1,3 +1,10 @@
+# 1.6.0
+
+-   exposed API function to the global
+    -   `getStances` to get the available stances from the actor
+    -   `getActionsUUIDS` to get a list of stance related actions UUIDs
+    -   `toggleStance` to toggle a stance
+
 # 1.5.0
 
 -   converted all stances UUIDs to be compatible with v11

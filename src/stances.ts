@@ -7,6 +7,7 @@ const STANCES: StanceData[] = [
         // Arcane Cascade
         feat: 'Compendium.pf2e.classfeatures.Item.09iL38CZZEa0q0Mt',
         effect: 'Compendium.pf2e.feat-effects.Item.fsjO5oTKttsbpaKl',
+        action: 'Compendium.pf2e.actionspf2e.Item.HbejhIywqIufrmVM',
     },
     {
         // Buckler Dance
@@ -17,6 +18,7 @@ const STANCES: StanceData[] = [
         // Bullet Dancer Stance
         feat: 'Compendium.pf2e.feats-srd.Item.j1hhTLOq7o80XCyV',
         effect: 'Compendium.pf2e.feat-effects.Item.6ctQFQfSZ6o1uyyZ',
+        action: 'Compendium.pf2e.actionspf2e.Item.SMF1hTWPHtmlS8Cd',
     },
     {
         // Cobra Stance
@@ -259,14 +261,21 @@ const STANCES: StanceData[] = [
 
 const FEATS: Map<ItemUUID, StanceData> = new Map()
 const EFFECTS: Set<ItemUUID> = new Set()
+const ACTIONS: Set<ItemUUID> = new Set()
+
+export function getActionsUUIDS() {
+    return new Set(ACTIONS)
+}
 
 export function parseCustomStances() {
     FEATS.clear()
     EFFECTS.clear()
+    ACTIONS.clear()
 
     for (const stance of STANCES) {
         FEATS.set(stance.feat, stance)
         EFFECTS.add(stance.effect)
+        ACTIONS.add(stance.action ?? stance.feat)
     }
 
     try {
@@ -357,4 +366,28 @@ export async function addStance(actor: CharacterPF2e, uuid: ItemUUID) {
     }
 
     return false
+}
+
+export async function toggleStance(actor: CharacterPF2e, effectUUID: ItemUUID) {
+    const effects = getEffects(actor)
+    const already = effects.findIndex(effect => effect.uuid === effectUUID)
+
+    let create = false
+
+    if (already < 0) {
+        create = true
+    } else if (effects.length) {
+        const other = effects.filter(effect => effect.uuid !== effectUUID).length
+        const more = effects.filter(effect => effect.uuid === effectUUID).length > 1
+        if (other || more) effects.splice(already, 1)
+    }
+
+    if (effects.length) {
+        await actor.deleteEmbeddedDocuments(
+            'Item',
+            effects.map(x => x.id)
+        )
+    }
+
+    if (create) addStance(actor, effectUUID)
 }

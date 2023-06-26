@@ -2,7 +2,8 @@ import { setModuleID } from '@utils/module'
 import { registerSetting } from '@utils/foundry/settings'
 import { checkForSavant } from './savant'
 import { refreshCharacterSheets, renderCharacterSheetPF2e } from './sheet'
-import { getEffects, parseCustomStances } from './stances'
+import { getActionsUUIDS, getEffects, getStances, parseCustomStances, toggleStance } from './stances'
+import { getCurrentModule } from '@utils/foundry/module'
 
 export const MODULE_ID = 'pf2e-stances'
 setModuleID(MODULE_ID)
@@ -19,6 +20,12 @@ Hooks.once('setup', () => {
 
 Hooks.once('ready', () => {
     parseCustomStances()
+
+    getCurrentModule<PF2eStancesApi>().api = {
+        getStances,
+        getActionsUUIDS,
+        toggleStance,
+    }
 })
 
 Hooks.on('deleteCombatant', deleteCombatant)

@@ -1,6 +1,6 @@
 import { localize } from '@utils/foundry/localize'
 import { templatePath } from '@utils/foundry/path'
-import { addStance, getEffects, getStances } from './stances'
+import { addStance, getEffects, getStances, toggleStance } from './stances'
 
 export async function renderCharacterSheetPF2e(sheet: CharacterSheetPF2e, html: JQuery) {
     const actor = sheet.actor
@@ -22,29 +22,8 @@ async function onToggleStance(event: JQuery.ClickEvent<any, any, HTMLElement>, a
     const target = event.currentTarget
     const canUseStances = target.closest('.pf2e-stances')?.classList.contains('can-use-stances')
     if (!event.ctrlKey && !canUseStances) return
-
     const effectUUID = target.dataset.effectUuid as ItemUUID
-    const effects = getEffects(actor)
-    const already = effects.findIndex(effect => effect.uuid === effectUUID)
-
-    let create = false
-
-    if (already < 0) {
-        create = true
-    } else if (effects.length) {
-        const other = effects.filter(effect => effect.uuid !== effectUUID).length
-        const more = effects.filter(effect => effect.uuid === effectUUID).length > 1
-        if (other || more) effects.splice(already, 1)
-    }
-
-    if (effects.length) {
-        await actor.deleteEmbeddedDocuments(
-            'Item',
-            effects.map(x => x.id)
-        )
-    }
-
-    if (create) addStance(actor, effectUUID)
+    toggleStance(actor, effectUUID)
 }
 
 async function addStances(actor: CharacterPF2e, html: JQuery) {

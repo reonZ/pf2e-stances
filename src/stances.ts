@@ -303,6 +303,13 @@ export function getStances(actor: CharacterPF2e) {
     const stances: StanceData[] = []
     const replaced: ItemUUID[] = []
     const effects: Map<ItemUUID, string> = new Map()
+    const actions: Map<ItemUUID, string> = new Map()
+
+    for (const action of actor.itemTypes.action) {
+        const sourceId = action.sourceId
+        if (!sourceId || !ACTIONS.has(sourceId)) continue
+        actions.set(sourceId, action.id)
+    }
 
     for (const feat of actor.itemTypes.feat) {
         const sourceId = feat.sourceId
@@ -311,6 +318,7 @@ export function getStances(actor: CharacterPF2e) {
 
         stances.push(stance)
         if (stance.replace) replaced.push(stance.replace)
+        if (!actions.has(sourceId)) actions.set(sourceId, feat.id)
     }
 
     for (const effect of actor.itemTypes.effect) {
@@ -328,12 +336,15 @@ export function getStances(actor: CharacterPF2e) {
             const replace = stance.replace && fromUuidSync<CompendiumIndexData>(stance.replace)
             if (!feat || !effect) return
 
+            const actionUUID = stance.action ?? stance.feat
+
             const returned: ReturnedStance = {
                 name: replace ? replace.name : feat.name,
                 img: effect.img,
+                actionID: actions.get(actionUUID)!,
                 effectID: effects.get(stance.effect) ?? '',
+                actionUUID,
                 effectUUID: stance.effect,
-                actionUUID: stance.action ?? stance.feat,
             }
 
             return returned

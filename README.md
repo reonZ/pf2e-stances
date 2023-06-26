@@ -46,9 +46,10 @@ game.modules.get('pf2e-stances').api
  * @typedef {object} ReturnedStance
  * @property {string} name
  * @property {string} img
+ * @property {string} actionID
  * @property {string} effectID
- * @property {ItemUUID} effectUUID
  * @property {ItemUUID} actionUUID
+ * @property {ItemUUID} effectUUID
  */
 
 /**
